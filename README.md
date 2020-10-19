@@ -1,4 +1,4 @@
-# Flask Docker Skelton
+# Flask Docker Skeleton
 
 ## Run production server
 
