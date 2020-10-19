@@ -8,9 +8,6 @@ localhost:5000 -> ((nginx:80 -> uwsgi:3031) + supervisord)
 $ docker-compose up
 ```
 
-http://localhost:5000
-
-
 ## Run development server
 
 Development server supports auto reload after every code change.
