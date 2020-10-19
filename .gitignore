@@ -1,18 +1,8 @@
-*pyc
-__pycache__
-*code-workspace
+!.gitkeep
 .vscode
 .DS_Store
-nktk_data
-*code-workspaceo
-appendonly.aof
-*.log
-*supervisord.*
+__pycache__
+*code-workspace
+*.log *supervisord.*
+*pyc
 *eipp.log.xz
-redis/
-APIDOC.pdf
-!.gitkeep
-topic_model_*
-.ipynb_checkpoints
-*.html
-*.pickle
