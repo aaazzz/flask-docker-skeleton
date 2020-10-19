@@ -5,9 +5,9 @@ import signal
 import logging
 import atexit
 import flask
+from flask import render_template
 from flask_cors import CORS
 
-# initialize our Flask application and pre-trained model
 app = flask.Flask(__name__)
 CORS(app)
 
@@ -59,14 +59,19 @@ def method_not_allowed(e):
     )
     return response, 405
 
-@app.route("/", methods=["GET"])
+@app.route("/hello", methods=["GET"])
 def hello():
-
+    """Return JSON."""
     response = {}
     response["message"] = "Hello!"
     return flask.jsonify(response)
 
+@app.route('/')
+def home():
+    """Landing page."""
+    return render_template('home.html', title="Jinja Demo Site", description="Smarter page templates with Flask & Jinja.")
 
 if __name__ == "__main__":
     # without uwsgi mode.
-    app.run()
+    # debug=True to auto reload
+    app.run(debug=True, port=5000)
