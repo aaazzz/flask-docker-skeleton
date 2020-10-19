@@ -1,0 +1,6 @@
+###### Requirements without Version Specifiers ######`
+flask
+redis
+uwsgi
+supervisor 
+flask-cors

@@ -1,0 +1,21 @@
+app:
+  build: "./app"
+  container_name: "app"
+  ports:
+  - "5000:80"
+  volumes:
+    - ./app:/app
+    - ./log:/var/log
+
+  environment:
+    - ENV_VALUE_HERE=env_value_here
+
+swagger-ui:
+  image: swaggerapi/swagger-ui
+  container_name: swagger-ui
+  ports:
+    - "8001:8080"
+  volumes:
+    - ./swagger:/usr/share/nginx/html/swagger
+  environment:
+    API_URL: ./swagger/openapi.yml
