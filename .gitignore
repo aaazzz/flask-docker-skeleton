@@ -3,6 +3,7 @@
 .DS_Store
 __pycache__
 *code-workspace
-*.log *supervisord.*
+*.log 
+*.pid
 *pyc
 *eipp.log.xz
